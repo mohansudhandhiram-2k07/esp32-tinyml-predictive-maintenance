@@ -21,3 +21,39 @@ managed_components/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+
+
+# --- Build & Binaries ---
+build/
+.pio/
+dist/
+*.bin
+*.elf
+*.map
+*.o
+*.d
+
+# --- ESP-IDF Specific ---
+# Ignore the generated config, but keep your defaults!
+sdkconfig
+sdkconfig.old
+managed_components/
+dependencies.lock
+
+# --- Data & Python ---
+__pycache__/
+*.py[cod]
+# Ignore local data logs if they aren't part of the firmware assets
+*.csv
+
+# --- IDE & Environment ---
+.vscode/
+# Keep settings if you want to share tasks, but ignore personal state
+.vscode/*.log
+.idea/
+.DS_Store
+
+# --- Secrets ---
+include/secrets.h
+.env
